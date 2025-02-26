@@ -2,7 +2,7 @@
 
 entero = 5
 flotante = 1.2
-cadena = "Ed Flores"
+cadena = "Oswaldo"
 booleano = True
 
 print("Imprime los tipos de datos")
