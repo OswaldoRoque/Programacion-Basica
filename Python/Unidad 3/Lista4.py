@@ -38,5 +38,12 @@ Materias.remove("Programacion basica")
 print(Materias)
 
 #Aqui debe de agregarse y el 1 es para la posicion
-Materias.append((1),"Programacion avanzada")
-print(Materias)
+"Materias.append(1,Programacion avanzada)"
+"print(Materias)"
+
+#Deberia de insertarse programacion basica 
+"Materias.insert[1],(Programacion basica)"
+
+
+for Materias in Materias:
+    print(Materias)

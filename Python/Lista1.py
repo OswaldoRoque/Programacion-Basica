@@ -9,7 +9,7 @@ mixta = [10, "Python", True, 3.14]
 
 # Lista vacía
 vacia = []
-vacia[0] = "Oswaldo"
+#vacia[0] = "Oswaldo" 
 
 print(numeros[0])
 print(nombres[1])
