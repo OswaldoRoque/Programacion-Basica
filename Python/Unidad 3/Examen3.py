@@ -91,10 +91,10 @@ while True:
     # Uso de librerías adicionales
     time.sleep(3)  # Pausa breve
 
-    archivo = "carros.csv"
+    carros = "carros.csv"
 
     # Guardar los diccionarios en un archivo CSV
-guardar_diccionarios_en_csv(archivo, carros)
+guardar_diccionarios_en_csv(carros)
 
     # Leer los diccionarios desde el archivo CSV
 carros_leidos = leer_diccionarios_de_csv(carros)
