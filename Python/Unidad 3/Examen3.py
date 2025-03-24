@@ -1,25 +1,25 @@
 # Examen unidad 3
-
+from Archivos import guardar_diccionarios_en_csv, leer_diccionarios_de_csv
 # Importamos las librerías necesarias
 import time
 import random
 import csv
+archivo = "carros.csv"
+# Diccionarios iniciales
+carros = {"Nissan": 50000}
 
-def guardar_diccionarios_en_csv(nombre_archivo, lista_diccionarios):
+def guardar_diccionarios_en_csv(lista_diccionarios):
     """Guarda una lista de diccionarios en un archivo CSV."""
     if not lista_diccionarios:
         print("La lista de diccionarios está vacía.")
-        return
-
-    # Obtener las claves del primer diccionario como encabezados
     encabezados = lista_diccionarios[0].keys()
 
-    with open(nombre_archivo, mode='w', newline='', encoding='utf-8') as archivo_csv:
+    with open(mode='w', newline='', encoding='utf-8') as archivo_csv:
         escritor = csv.DictWriter(archivo_csv, fieldnames=encabezados)
         escritor.writeheader()
         escritor.writerows(lista_diccionarios)
 
-    print(f"Datos guardados en {nombre_archivo} exitosamente.")
+    print(f"Datos guardados en exitosamente.")
 
 def leer_diccionarios_de_csv(nombre_archivo):
     """Lee un archivo CSV y lo convierte en una lista de diccionarios."""
@@ -30,11 +30,6 @@ def leer_diccionarios_de_csv(nombre_archivo):
     except FileNotFoundError:
         print(f"El archivo {nombre_archivo} no existe.")
         return []
-
-if __name__ == "__main__":        
-# Diccionarios iniciales
-    carros = {}
-
 # Función para mostrar el menú
 def mostrar_menu():
     print("\n--- Menú Principal ---")
@@ -89,14 +84,13 @@ while True:
         print("No existe esa funcion.")
 
     # Uso de librerías adicionales
-    time.sleep(3)  # Pausa breve
+    time.sleep(3)  # Pausa breve}
 
-    carros = "carros.csv"
+guardar_diccionarios_en_csv(archivo, carros)
+# Actividad hacer un programa llamado LeerconLibreria.py que importe la función leer_diccionarios_de_csv y lea el archivo datos.csv
 
-    # Guardar los diccionarios en un archivo CSV
-guardar_diccionarios_en_csv(carros)
+leer_diccionarios_de_csv(archivo)
 
-    # Leer los diccionarios desde el archivo CSV
-carros_leidos = leer_diccionarios_de_csv(carros)
-print("Datos leídos del archivo CSV:")
-print(carros_leidos)
+datos_leidos = leer_diccionarios_de_csv(archivo)
+print("Datos leidos del archivo CSV:")
+print(datos_leidos)
