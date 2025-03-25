@@ -3,33 +3,13 @@ from Archivos import guardar_diccionarios_en_csv, leer_diccionarios_de_csv
 # Importamos las librerías necesarias
 import time
 import random
-import csv
-archivo = "carros.csv"
+archivo = "datos.csv"
+
 # Diccionarios iniciales
-carros = {"Nissan": 50000}
-
-def guardar_diccionarios_en_csv(lista_diccionarios):
-    """Guarda una lista de diccionarios en un archivo CSV."""
-    if not lista_diccionarios:
-        print("La lista de diccionarios está vacía.")
-    encabezados = lista_diccionarios[0].keys()
-
-    with open(mode='w', newline='', encoding='utf-8') as archivo_csv:
-        escritor = csv.DictWriter(archivo_csv, fieldnames=encabezados)
-        escritor.writeheader()
-        escritor.writerows(lista_diccionarios)
-
-    print(f"Datos guardados en exitosamente.")
-
-def leer_diccionarios_de_csv(nombre_archivo):
-    """Lee un archivo CSV y lo convierte en una lista de diccionarios."""
-    try:
-        with open(nombre_archivo, mode='r', encoding='utf-8') as archivo_csv:
-            lector = csv.DictReader(archivo_csv)
-            return [fila for fila in lector]
-    except FileNotFoundError:
-        print(f"El archivo {nombre_archivo} no existe.")
-        return []
+carros = [
+{"Nissan": 50000}
+]
+print(carros)
 # Función para mostrar el menú
 def mostrar_menu():
     print("\n--- Menú Principal ---")
@@ -87,6 +67,7 @@ while True:
     time.sleep(3)  # Pausa breve}
 
 guardar_diccionarios_en_csv(archivo, carros)
+
 # Actividad hacer un programa llamado LeerconLibreria.py que importe la función leer_diccionarios_de_csv y lea el archivo datos.csv
 
 leer_diccionarios_de_csv(archivo)
