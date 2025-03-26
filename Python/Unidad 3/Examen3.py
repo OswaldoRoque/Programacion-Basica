@@ -9,7 +9,6 @@ archivo = "datos.csv"
 carros = [
 {"Nissan": 50000}
 ]
-print(carros)
 # Función para mostrar el menú
 def mostrar_menu():
     print("\n--- Menú Principal ---")
