@@ -32,7 +32,7 @@ while True:
         # Agregar un carro de lujo
         nuevo_carro = input("Ingresa la marca del carro: ")
         precio = int(input(f"Ingrese el precio de {nuevo_carro} (en MXM): "))
-        carros[nuevo_carro] = precio
+        carros(nuevo_carro) == precio
         print(f"{nuevo_carro} agregado con éxito al diccionario de carros.")
 
     elif opcion == "2":
