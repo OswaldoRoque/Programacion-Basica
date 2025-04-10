@@ -16,7 +16,7 @@ class Iphone(Celulares):
  
      def presentarse(self):
          # Sobrescribimos el método de la clase padre
-         return f"Marca de celular: {self.marca} y su dueño es {self.creador} pero el dueño de todo eso es {self.dueño}."
+         return f"Marca de celular: {self.marca} y el creador es {self.creador} pero el dueño de todo es {self.dueño}."
  
  # Otra clase derivada
 class Oppo(Celulares):
