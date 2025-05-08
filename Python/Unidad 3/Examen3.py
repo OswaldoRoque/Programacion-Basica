@@ -3,6 +3,13 @@ from Archivos import guardar_diccionarios_en_csv, leer_diccionarios_de_csv
 # Importamos las librerías necesarias
 import time
 import random
+import time
+from reader import feed
+
+def main():
+    """Imprime el último tutorial de Python"""
+tic = time.perf_counter()
+
 archivo = "datos.csv"
 
 # Diccionarios iniciales
@@ -32,7 +39,6 @@ while True:
         # Agregar un carro de lujo
         nuevo_carro = input("Ingresa la marca del carro: ")
         precio = int(input(f"Ingrese el precio de {nuevo_carro} (en MXM): "))
-        carros(nuevo_carro) == precio
         print(f"{nuevo_carro} agregado con éxito al diccionario de carros.")
 
     elif opcion == "2":
@@ -65,7 +71,7 @@ while True:
     # Uso de librerías adicionales
     time.sleep(3)  # Pausa breve}
 
-guardar_diccionarios_en_csv(archivo, carros)
+"""guardar_diccionarios_en_csv(archivo, carros)
 
 # Actividad hacer un programa llamado LeerconLibreria.py que importe la función leer_diccionarios_de_csv y lea el archivo datos.csv
 
@@ -73,4 +79,11 @@ leer_diccionarios_de_csv(archivo)
 
 datos_leidos = leer_diccionarios_de_csv(archivo)
 print("Datos leidos del archivo CSV:")
-print(datos_leidos)
+print(datos_leidos)"""
+
+
+toc = time.perf_counter()
+print(f"El examen ha sido descargado en {toc - tic:0.4f} segundos")
+
+if __name__ == "__main__":
+    main()
