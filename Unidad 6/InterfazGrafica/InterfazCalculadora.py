@@ -38,7 +38,6 @@ class CalculatorApp(QWidget):
         self.mul_button.clicked.connect(lambda: self.calculate_operation(self.multiplicacion))
         self.div_button.clicked.connect(lambda: self.calculate_operation(self.division))
 
-        # Layout principal
         layout = QVBoxLayout()
         layout.addWidget(self.label_conversion)
         layout.addWidget(self.text_input)
