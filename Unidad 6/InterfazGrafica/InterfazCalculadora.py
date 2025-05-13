@@ -5,20 +5,12 @@ class CalculatorApp(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Calculadora y Conversión")
-        self.setGeometry(100, 100, 350, 250)
+        self.setGeometry(200, 200, 350, 250)
 
         self.initUI()
 
     def initUI(self):
-        # Sección de conversión
-        self.label_conversion = QLabel("Numero float:", self)
-        self.text_input = QLineEdit(self)
-        self.convert_button = QPushButton("Convertir", self)
-        self.result_conversion = QLabel("", self)
 
-        self.convert_button.clicked.connect(self.convert_to_float)
-
-        # Sección de cálculo
         self.label_num1 = QLabel("Número 1:", self)
         self.input_num1 = QLineEdit(self)
 
@@ -39,10 +31,6 @@ class CalculatorApp(QWidget):
         self.div_button.clicked.connect(lambda: self.calculate_operation(self.division))
 
         layout = QVBoxLayout()
-        layout.addWidget(self.label_conversion)
-        layout.addWidget(self.text_input)
-        layout.addWidget(self.convert_button)
-        layout.addWidget(self.result_conversion)
 
         layout.addWidget(self.label_num1)
         layout.addWidget(self.input_num1)
@@ -60,14 +48,6 @@ class CalculatorApp(QWidget):
         layout.addWidget(self.result_label)
 
         self.setLayout(layout)
-
-    def convert_to_float(self):
-        texto = self.text_input.text()
-        try:
-            numero = float(texto)
-            self.result_conversion.setText(f"Número convertido: {numero}")
-        except ValueError:
-            QMessageBox.warning(self, "Error", "Por favor ingresa un número válido.")
 
     def calculate_operation(self, operation):
         try:
