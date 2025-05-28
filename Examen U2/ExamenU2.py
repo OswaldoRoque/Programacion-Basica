@@ -28,13 +28,13 @@ while not adivinado:
 """ Conteste las siguientes preguntas después de hacer funcionar el código anterior:
 
 1. ¿Qué hace la función randint() del módulo random?
-Se pone un numero aleatorio entre numeros que elijas, como en este codigo sale un numero aleatorio entre el 1 y rl 10
+Se selecciona un numero aleatorio del 1 al 10 
 2. ¿Qué tipo es la variable intentos?
-
+Es entero por que pone el numero de veces que intentamos adivinar el numero 
 3. ¿Qué estamos haciendo en la línea 1?
-
+Estamos importando la libreria de random 
 4. ¿Mencione los operadores que se utilizan en el código?
-Print, imput
+=,+=, >
 5. ¿Qué hace la palabra intentos que está entre corchetes?
-Pone el numero de intentos que necesitaste para poder adivinar el numero aleatorio que se habia sacado 
+Pone el numero de intentos que necesitaste para poder adivinar el numero aleatorio que habia salido
 """
